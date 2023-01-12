@@ -1,0 +1,20 @@
+{
+  "name": "juice-box",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/winnieliu0629/Juice-Box.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/winnieliu0629/Juice-Box/issues"
+  },
+  "homepage": "https://github.com/winnieliu0629/Juice-Box#readme"
+}
