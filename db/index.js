@@ -69,6 +69,20 @@ async function getUserById(userId) {
     }
 }
 
+async function getUserByUsername(username) {
+    try {
+      const { rows: [user] } = await client.query(`
+        SELECT *
+        FROM users
+        WHERE username=$1;
+      `, [username]);
+  
+      return user;
+    } catch (error) {
+      throw error;
+    }
+}
+
 async function createPost({ authorId, title, content, tags=[] }) {
     try {
         console.log("Starting to create posts...");
@@ -229,7 +243,7 @@ async function getPostsByTagName(tagName) {
         post => getPostById(post.id)
     ));
     } catch (error) {
-    throw error;
+        throw error;
     }
 } 
   
@@ -241,6 +255,7 @@ module.exports = {
     getAllTags,
     getPostsByUser,
     getUserById,
+    getUserByUsername,
     getPostById,
     getPostsByTagName,
     addTagsToPost,
